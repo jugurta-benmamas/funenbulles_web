@@ -1,0 +1,206 @@
+
+form {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    background-color: var(--couleur-texte-clair);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--couleur-bordure);
+    font-family: var(--font-principale); /* Police adaptée à l'univers BD */
+}
+
+/* Conteneur pour chaque question et ses réponses */
+.question-block {
+    background-color: var(--couleur-fond-questions);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--couleur-bordure);
+    border: 1px solid var(--couleur-bordure-clair);
+}
+
+
+
+/* Style pour chaque question */
+form p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--couleur-texte-dark);
+    font-family: var(--font-principale);
+}
+
+input[type="radio"] {
+    visibility: hidden;     /* Cacher les boutons radio */
+    position: absolute;
+}
+
+input[type="radio"] + label {
+    background-color: var(--couleur-fond-radio);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de style lorsque la réponse est sélectionnée */
+input[type="radio"]:checked + label {
+    background-color: var(--couleur-fond-radio-checked);
+    color: white;
+    border: 2px solid var(--couleur-fond-radio-checked);
+}
+
+/* Style au survol */
+input[type="radio"] + label:hover {
+    background-color: var(--couleur-hover);
+}
+
+/* Style du bouton Valider */
+#submit {
+    background-color: var(--couleur-fond-bandeau-clair);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--couleur-bordure);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#submit:hover {
+    background-color: var(--couleur-hover2);
+    transform: translateY(-2px);
+}
+
+#submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px var(--couleur-bordure);
+}
+
+.ludique h1{
+    text-align: center;
+    font-family: var(--font-principale);
+    color: var(--couleur-principale);
+}
+
+.questions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 colonnes de taille égale */
+    gap: 20px;
+    font-family: var(--font-principale);
+}
+
+.question-card {
+    background-color: var(--couleur-blanc);
+    border: 1px solid var(--couleur-bordure-clair);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--couleur-bordure);
+    transition: 0.3s;
+}
+
+.question-card:hover {
+    box-shadow: 0 8px 16px var(--couleur-bordure);
+}
+
+.question-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--couleur-btn);
+    font-family: var(--font-principale);
+}
+
+.question-body {
+    margin-top: 10px;
+}
+
+.correct-label {
+    color: var(--couleur-rep-ok);
+    font-weight: bold;
+}
+
+.question-footer {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.questions-container p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.ludiqueResult  {
+    font-family: var(--font-principale);
+    margin: 10px 0 20px auto;
+}
+
+.ludiqueResult h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ludiqueResult h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    .score-title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--couleur-texte-dark);
+    margin-bottom: 20px;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-message {
+    font-size: x-large;
+    color: var(--couleur-texte-fonce);
+    margin-bottom: 10px;
+}
+
+.score-box {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--couleur-noir);
+    padding: 20px 40px;
+    background-color: var(--couleur-fond-moyen);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--couleur-bordure);
+    transform: scale(1);
+    animation: pop-in 0.5s ease-out forwards;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+

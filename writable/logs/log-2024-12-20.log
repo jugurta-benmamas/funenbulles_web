@@ -1,0 +1,140 @@
+ERROR - 2024-12-20 16:17:02 --> mysqli_sql_exception: Champ 'nom' inconnu dans field list in C:\wamp64\www\funenbulles_web\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\funenbulles_web\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `login`,...', 0)
+#1 C:\wamp64\www\funenbulles_web\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `login`,...')
+#2 C:\wamp64\www\funenbulles_web\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `login`,...')
+#3 C:\wamp64\www\funenbulles_web\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `login`,...', Array, false)
+#4 C:\wamp64\www\funenbulles_web\app\Models\m_admin.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\funenbulles_web\app\Controllers\c_admin.php(69): App\Models\m_admin->connexion('Hatan.C')
+#6 C:\wamp64\www\funenbulles_web\system\CodeIgniter.php(933): App\Controllers\c_admin->connexion()
+#7 C:\wamp64\www\funenbulles_web\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_admin))
+#8 C:\wamp64\www\funenbulles_web\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\funenbulles_web\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\funenbulles_web\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\funenbulles_web\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-12-20 16:17:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'nom' inconnu dans field list
+[Method: POST, Route: connexion]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = :login:', [...], false)
+ 2 APPPATH\Models\m_admin.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_admin.php(69): App\Models\m_admin->connexion('Hatan.C')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\c_admin->connexion()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 16:17:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'nom' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = :login:', [...], false)
+ 4 APPPATH\Models\m_admin.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\c_admin.php(69): App\Models\m_admin->connexion('Hatan.C')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\c_admin->connexion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 16:17:02 --> [Caused by] mysqli_sql_exception: Champ 'nom' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = :login:', [...], false)
+ 5 APPPATH\Models\m_admin.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\c_admin.php(69): App\Models\m_admin->connexion('Hatan.C')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\c_admin->connexion()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-20 16:17:12 --> mysqli_sql_exception: Champ 'nom' inconnu dans field list in C:\wamp64\www\funenbulles_web\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\wamp64\www\funenbulles_web\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `login`,...', 0)
+#1 C:\wamp64\www\funenbulles_web\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `login`,...')
+#2 C:\wamp64\www\funenbulles_web\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `login`,...')
+#3 C:\wamp64\www\funenbulles_web\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `login`,...', Array, false)
+#4 C:\wamp64\www\funenbulles_web\app\Models\m_admin.php(19): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\funenbulles_web\app\Controllers\c_admin.php(69): App\Models\m_admin->connexion('Hatan.C')
+#6 C:\wamp64\www\funenbulles_web\system\CodeIgniter.php(933): App\Controllers\c_admin->connexion()
+#7 C:\wamp64\www\funenbulles_web\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_admin))
+#8 C:\wamp64\www\funenbulles_web\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\funenbulles_web\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\funenbulles_web\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\funenbulles_web\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-12-20 16:17:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Champ 'nom' inconnu dans field list
+[Method: POST, Route: connexion]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = :login:', [...], false)
+ 2 APPPATH\Models\m_admin.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_admin.php(69): App\Models\m_admin->connexion('Hatan.C')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\c_admin->connexion()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 16:17:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Champ 'nom' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = :login:', [...], false)
+ 4 APPPATH\Models\m_admin.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\c_admin.php(69): App\Models\m_admin->connexion('Hatan.C')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\c_admin->connexion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-20 16:17:12 --> [Caused by] mysqli_sql_exception: Champ 'nom' inconnu dans field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = \'Hatan.C\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `login`, `nom`, `prenom`, `motPasse`, `role`
+FROM `users`
+WHERE `login` = :login:', [...], false)
+ 5 APPPATH\Models\m_admin.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\c_admin.php(69): App\Models\m_admin->connexion('Hatan.C')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\c_admin->connexion()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

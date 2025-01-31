@@ -1,0 +1,18 @@
+
+footer {
+    background-color: var(--couleur-fond-bandeau-clair);
+    color: var(--couleur-texte-bandeau);
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 35px;
+    margin-right: 10px;
+}

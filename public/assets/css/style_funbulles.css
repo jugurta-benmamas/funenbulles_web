@@ -1,0 +1,102 @@
+@import 'bandeau.css';
+@import 'ludique_scores.css';
+@import 'ludique.css';
+@import 'admin.css';
+@import "mention.css";
+@import 'auteurs.css';
+@import 'expositions.css';
+@import 'infosPratiques.css';
+@import 'footer.css';
+
+
+:root {
+    --couleur-blanc: #ffffff;
+    --couleur-noir : #0a0200;
+    --couleur-principale: #389898;
+    --couleur-hover: #b9e2e2;
+    --couleur-hover2: #45a049;
+    --couleur-btn: #297373;
+    --couleur-texte-clair: #fffcf7;
+    --couleur-texte-fonce: #444;
+    --couleur-texte-dark: #333;
+    --couleur-texte-secondaire: #c0392b;
+    --couleur-fond-clair :#fdfdf6;
+    --couleur-reponse-quiz : #de4800;
+    --couleur-bordure : rgba(0, 0, 0, 0.2);
+    --couleur-bordure-clair: #ddd;
+    --couleur-fond-moyen : #c2e7e9;
+    --couleur-rep-ok :#28a745;
+    --couleur-fond-questions : #f1f1f1;
+    --couleur-fond-bandeau-clair: #6db0b0;
+    --couleur-fond-bandeau-fonce: #0e6173;
+    --couleur-texte-bandeau: #fcf7df;
+    --couleur-erreur: #e73a3a;
+    --couleur-ligne-impaire-tableaux: #fbe6d2;
+    --couleur-ligne-paire-tableaux: #ffeded;
+    --couleur-fond-infosPratique: #fff8e7;
+    --couleur-fond-radio: #e0e0e0;
+    --couleur-fond-radio-checked: #b77be9;
+    --font-principale : 'Comic Sans MS', 'Arial', sans-serif;
+}
+
+.accueil {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--couleur-fond-clair);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px var(--couleur-bordure);
+    line-height: 1.8;
+    font-family: var(--font-principale);
+    color: var(--couleur-texte-dark);
+}
+
+.accueil h1 {
+    text-align: center;
+    font-size: 3em;
+    color: var(--couleur-principale);
+    margin-bottom: 20px;
+}
+
+
+.accueil h2 {
+    font-size: 1.8em;
+    color: var(--couleur-texte-secondaire);
+    margin-top: 30px;
+}
+
+
+.accueil p {
+    text-align: justify;
+    margin-bottom: 20px;
+    color: var(--couleur-texte-fonce);
+}
+
+span {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+main{
+    min-height: 70vh;
+}
+
+#retourHaut {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: var(--couleur-btn);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#retourHaut:hover {
+    background-color: var(--couleur-hover);
+}
+

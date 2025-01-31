@@ -1,0 +1,44 @@
+.question-image img{
+    min-width: 10%;
+    display: block;
+    width: 20%;
+    height: auto;
+}
+
+input[type="radio"]#question_8 {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#question_10 {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#question_12 {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#question_14 {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#question_16 {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#theme_Manga {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#theme_Bd {
+    visibility: visible;
+    position: relative;
+}
+
+
+

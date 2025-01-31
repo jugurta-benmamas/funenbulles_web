@@ -1,0 +1,247 @@
+.admin h1{
+    text-align: center;
+    font-family: var(--font-principale);
+    color: var(--couleur-principale);
+}
+#deconnexion{
+    text-align: right;
+    font-family: var(--font-principale);
+    font-size: 15px;
+}
+#mess_deconnexion{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mess_deconnexion h2{
+    font-family: var(--font-principale);
+    color: var(--couleur-principale);
+    font-size: 50px;
+}
+.admin p{
+    text-align: center;
+}
+.erreurs{
+    color: var(--couleur-erreur);
+    font-style: italic;
+}
+
+
+/* ==  gestion des tableaux  == */
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+th {
+    font-family: var(--font-principale);
+    font-size: 20px;
+    border: 1px solid var(--couleur-bordure);
+    background-color: var(--couleur-principale); /* Couleur de l'en-tête */
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+td {
+    font-family: var(--font-principale);
+    font-size: 15px;
+    border: 1px solid var(--couleur-bordure);
+    padding: 8px;
+    text-align: left;
+}
+
+/* Appliquer une couleur de fond différente pour une ligne sur deux*/
+tbody tr:nth-child(odd) {
+    background-color: var(--couleur-ligne-impaire-tableaux); /* Couleur des lignes impaires */
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--couleur-ligne-paire-tableaux); /* Couleur des lignes paires (optionnelle) */
+}
+
+/* ==  fin gestion des tableaux  == */
+.corps_config{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.corps_config label{
+    display: inline-block;
+    font-family: var(--font-principale);
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.corps_config p input{
+    font-family: var(--font-principale);
+    font-size: 16px;
+    width: 100%     ;
+}
+
+.corps_config #submit{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+/*Conteneur pour ajouter,modifier ou supprimer des questions*/
+
+
+.configAdmin {
+    width: 95%;
+    background-color: var(--couleur-fond-questions);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--couleur-bordure);
+    border: 1px solid var(--couleur-bordure-clair);
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: var(--font-principale);
+}
+
+
+.configAdmin button {
+    background-color: var(--couleur-btn);
+    color: var(--couleur-texte-clair);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px 0 0 30px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    max-width: 300px;
+    font-size: 20px;
+}
+
+.ludique #submit_supprimer{
+    background-color: var(--couleur-texte-secondaire);
+    color: var(--couleur-texte-clair);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    display: flex;
+    margin-left:auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    font-size: 15px;
+    max-width: 300px;
+}
+
+.ludique #submit_modifier{
+    background-color: var(--couleur-btn);
+    color: var(--couleur-texte-clair);
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    margin-top: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    max-width: 300px;
+    font-size: 30px;
+}
+
+.ludique #submit_modifier:hover,#submit_supprimer:hover{
+    background-color: var(--couleur-hover);
+}
+
+#submit_recherche{
+    background-color: var(--couleur-btn);
+    color: var(--couleur-texte-clair);
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    margin-top: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    max-width: 400px;
+    font-size: 20px;
+}
+#motCle{
+    color: var(--couleur-texte-dark);
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    margin-top: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    max-width: 300px;
+    font-size: 20px;
+}
+
+.configAdmin button:hover{
+    background-color: var(--couleur-hover);
+}
+
+.ludique #lesQuestions_btn #submit{
+    display: flex;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.theme-checkbox-ajout + span {
+    font-family: var(--font-principale);
+}
+
+input[type="radio"]#prop1_oui {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#prop2_oui {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#prop3_oui {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#prop4_oui {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#prop1_non {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#prop2_non {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#prop3_non {
+    visibility: visible;
+    position: relative;
+}
+
+input[type="radio"]#prop4_non {
+    visibility: visible;
+    position: relative;
+}

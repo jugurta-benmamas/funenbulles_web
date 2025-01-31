@@ -1,0 +1,42 @@
+
+.auteurs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: var(--couleur-fond-questions);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 16px var(--couleur-bordure);
+    font-family: var(--font-principale);
+}
+.auteurs h1{
+    text-align: center;
+    font-size: 2em;
+    color: var(--couleur-principale);
+    margin-bottom: 20px;
+    font-family: var(--font-principale);
+}
+
+.auteur-item {
+    flex: 1 1 45%;              /* Ajuste la largeur pour éviter que les éléments ne passent en dessous */
+    background-color: var(--couleur-blanc);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--couleur-bordure);
+    color: var(--couleur-texte-dark);
+    line-height: 1.8;
+    margin-bottom: 20px;    
+}
+
+.auteur-item h3 {
+    color: var(--couleur-texte-secondaire);
+    font-size: 1.5em;
+}
+
+.auteur-item p {
+    text-align: justify;
+    color: var(--couleur-texte-fonce);
+}
